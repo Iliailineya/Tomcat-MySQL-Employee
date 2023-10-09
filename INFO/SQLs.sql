@@ -23,3 +23,18 @@ CREATE TABLE IF NOT EXISTS employees
   phone VARCHAR(128) NOT NULL,
   PRIMARY KEY (id)
 );
+
+--Выборка всех сотрудников:
+  SELECT * FROM employees;
+
+--Выборка сотрудника по ID
+SELECT * FROM employees WHERE id = 1;
+
+--Добавление нового сотрудника:
+INSERT INTO employees (name, position, phone) VALUES ('John Doe', 'Manager', '555-123-4567');
+
+--Обновление информации о сотруднике по его ID:
+UPDATE employees SET name = 'Updated Name', position = 'Updated Position', phone = '555-987-6543' WHERE id = 2;
+
+--Удаление сотрудника по его ID:
+DELETE FROM employees WHERE id = 3;
